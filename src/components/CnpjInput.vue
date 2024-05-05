@@ -1,7 +1,15 @@
 <template>
     <div>
       <label :for="name">{{ label }}:</label>
-      <input type="text" :name="name" :id="name" :placeholder="placeholder" :value="formattedCnpj" @input="handleInput">
+      <input 
+        type="text" 
+        :name="name" 
+        :id="name" 
+        :placeholder="placeholder" 
+        :value="formattedCnpj" 
+        @input="handleInput"
+        class="form-control"
+        >
     </div>
   </template>
   
@@ -29,6 +37,5 @@
   </script>
   
   <style>
-  /* Add your input styling here */
   </style>
   

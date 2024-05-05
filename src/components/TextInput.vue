@@ -1,7 +1,15 @@
 <template>
   <div>
     <label :for="name">{{ label }}:</label>
-    <input :type="type" :name="name" :id="name" :placeholder="placeholder" :value="value" @input="updateValue($event.target.value)">
+    <input 
+        :type="type" 
+        :name="name" 
+        :id="name" 
+        :placeholder="placeholder" 
+        :value="value" 
+        @input="updateValue($event.target.value)"
+        class="form-control"
+        >
   </div>
 </template>
 
@@ -17,5 +25,4 @@ export default {
 </script>
 
 <style>
-/* Add your input styling here */
 </style>
