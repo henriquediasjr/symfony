@@ -1,6 +1,37 @@
 <template>
-  <div id="app">
+  <div class="card">
     <form>
+
+      <div class="col-md-6 mb-3">
+        <CodigoCadastro label="Código Cliente:" placeholder="Enter código cliente"></CodigoCadastro>
+        <CodigoCadastro label="Código Fornecedor:" placeholder="Enter código fornecedor"></CodigoCadastro>
+
+        <RazaoSocial></RazaoSocial>
+        <InscricaoEstadual></InscricaoEstadual>
+
+        <TipoEmpresa></TipoEmpresa>
+        <ContaGerencial></ContaGerencial>
+        <CustomSelect label="Conta Gerencial:" :options="['exemplo 1', 'exemplo 2', 3, 4]"></CustomSelect>
+
+        <DescricaoInput label="Descrição Conta Gerencial:" placeholder="Enter descrição conta gerencial"></DescricaoInput>
+
+
+        <GrupoConta></GrupoConta>
+        <SituacaoCadastral></SituacaoCadastral>
+        <UnidadeNegocio></UnidadeNegocio>
+
+        <CentroCusto label="Centro de Custo:" placeholder="Enter centro de custo"></CentroCusto>
+        <CentroCusto label="Sub Centro de Custo:" placeholder="Enter sub centro de custo"></CentroCusto>
+        <CentroCusto label="Sub Sub Centro de Custo:" placeholder="Enter sub sub centro de custo"></CentroCusto>
+
+        <DescricaoInput label="Descrição Centro de Custo:" placeholder="Enter descrição centro de custo"></DescricaoInput>
+        <DescricaoInput label="Descrição Sub Sub Centro de Custo:" placeholder="Enter descrição sub sub centro de custo"></DescricaoInput>
+
+        <CustomSelect label="Nível de Alçada de Aprovação:" :options="[1, 2, 3, 4]"></CustomSelect>
+        <CustomSelect label="Condição de Pagamento:" :options="['À vista', '30 dias', '60 dias', '90 dias']"></CustomSelect>
+
+
+      </div>
       <fieldset class="mb-3">
         <legend>Personal Information</legend>
         <div class="row">
@@ -53,7 +84,7 @@
         </div>
       </fieldset>
       <fieldset class="mb-3">
-        <legend>Additional Information</legend>
+        <legend>Contact</legend>
         <div class="row">
           <div class="col-md-6 mb-3">
             <ContatoComercialInput label="Contato Comercial" v-model="contatoComercial"></ContatoComercialInput>
@@ -78,6 +109,9 @@
             <MeioRecebimentoInput label="Meio de Recebimento" v-model="meioRecebimento"></MeioRecebimentoInput>
           </div>
         </div>
+      </fieldset>
+      <fieldset class="mb-3">
+        <legend>Financial info</legend>
         <div class="row">
           <div class="col-md-6 mb-3">
             <BancoInput label="Banco" v-model="banco"></BancoInput>
@@ -136,6 +170,19 @@ import PixInput from './components/PixInput.vue';
 import CondicaoRecebimentoInput from './components/CondicaoRecebimentoInput.vue';
 import JurosInput from './components/JurosInput.vue';
 import MultaInput from './components/MultaInput.vue';
+import CodigoCadastro from './components/CodigoCadastro.vue';
+import RazaoSocial from './components/RazaoSocial.vue'
+import InscricaoEstadual from './components/InscricaoEstadual.vue'
+import TipoEmpresa from './components/TipoEmpresa.vue'
+import ContaGerencial from './components/ContaGerencial.vue'
+import GrupoConta from './components/GrupoConta.vue'
+import SituacaoCadastral from './components/SituacaoCadastral.vue'
+import UnidadeNegocio from './components/UnidadeNegocio.vue'
+import CentroCusto from './components/CentroCusto.vue';
+import DescricaoInput from './components/DescricaoInput.vue';
+import CustomSelect from './components/CustomSelect.vue';
+
+
 
 export default {
   components: {
@@ -160,7 +207,19 @@ export default {
     PixInput,
     CondicaoRecebimentoInput,
     JurosInput,
-    MultaInput
+    MultaInput,
+    CodigoCadastro,
+    RazaoSocial,
+    InscricaoEstadual,
+    TipoEmpresa,
+    ContaGerencial,
+    GrupoConta,
+    SituacaoCadastral,
+    UnidadeNegocio,
+    CentroCusto,
+    DescricaoInput,
+    CustomSelect,
+    
   },
   data() {
     return {
@@ -195,4 +254,4 @@ export default {
 
 <style>
 /* Add your app styling here */
-</style>
+</style>./components/SelectInput.vue./components/SelectedOption.vue

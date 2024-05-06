@@ -1,14 +1,17 @@
 <template>
-    <div class="input-container">
-      <label :for="name">{{ label }}</label>
+    <div class="relative mt-5">
+      <label 
+        class="label absolute block bg-input top-0 ltr:ml-3 rtl:mr-3 px-1 rounded font-heading uppercase"
+        :for="name">
+        {{ label }}</label>
       <input 
-        type="text" 
+        type="date" 
         :name="name" 
         :id="name" 
         :placeholder="placeholder" 
         :value="value" 
         @input="handleInput"
-        class="form-control"
+        class="form-control mt-2 pt-5"
       >
     </div>
   </template>
